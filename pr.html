@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pr.css">
+    <link rel="icon" href="publik\public\1234.png">
+    <title>swapit/Профиль</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="button-container">
+                <div class="profile-section">
+                    <a href="pr.html">
+                        <img src="publik\4092564-about-mobile-ui-profile-ui-user-website_114033.png" alt="Личный профиль"
+                            id="profile-image-button">
+                    </a>
+                </div>
+                <div class="right-buttons">
+                    <a href="k.html">
+                        <img src="publik\shoppingcart_80945 (1).png" alt="Корзина" id="cart-image-button">
+                    </a>
+                    <a href="index.html">
+                        <span>Главная</span>
+                    </a>
+                    <a href="inf.html">
+                        <span>Информация</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="personal-info">
+                <h2>Личная информация</h2>
+                <div id="profile-display">
+                    <p>Имя Фамилия: <span id="display-name">Иван Иванов</span></p>
+                    <p>Email: <span id="display-email">ivan@example.com</span></p>
+                    <p>Телефон: <span id="display-phone">+7 123 456 78 90</span></p>
+                    <button id="edit-profile-button">Изменить данные</button>
+                </div>
+
+                <form id="profile-form" style="display:none;">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" value="Иван Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" value="ivan@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" value="+7 123 456 78 90">
+                    </div>
+                    <button type="submit">Сохранить изменения</button>
+                    <button type="button" id="cancel-edit-button">Отмена</button>
+                </form>
+            </div>
+        </div>
+        <div id="products">
+            <button id="add-product-button">Добавить товар</button>
+            <div id="add-product-form-container" style="display: none;">
+                <h2>Добавить товар</h2>
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="product-image">Изображение товара:</label>
+                        <input type="file" id="product-image" accept="image/*">
+                        <button type="button" id="remove-product-image">Убрать фото</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-category">Категория:</label>
+                        <select id="product-category" required>
+                            <option value="clothing">clothing</option>
+                            <option value="electronics">electronics</option>
+                            <option value="home">books</option>
+                            <option value="books">furniture</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-rarity">Редкость:</label>
+                        <select id="product-rarity" required>
+                            <option value="common">common</option>
+                            <option value="uncommon">rare</option>
+                            <option value="rare">unique</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Описание товара:</label>
+                        <textarea id="product-description" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Отправить на обработку</button>
+                    <button type="button" id="cancel-add-product-button">Отмена</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer2">
+        <div class="left-text">2024@ Gaivoronskaia Kristina</div>
+        <div class="right-text">Все материалы, ссылки, IP, товарные знаки использованы исключительно в образовательных
+            целях, без какой либо выгоды включая экономической. Материалы, ссылки, IP, товарные знаки не предпологаются
+            использованием третьими лицами для реализации своих проектов включая образовательных!</div>
+    </footer>
+    <script src="pr.js" defer>
+         document.getElementById('product-form').onsubmit = async function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/send-product-data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+            alert(result.message || result.error);
+        };
+    </script>
+</body>
+
+</html>

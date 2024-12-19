@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="ru">
+    <head> 
+        <title>swapit/Вход</title>
+        <link rel="stylesheet" href="reg.css"> 
+        <script src="reg.js"></script> 
+        <link rel="icon" href="publik\public\1234.png">
+
+    </head> 
+    <body>
+        <header>Бартер — это обмен одного товара (работы, услуги) на другой без использования денег.</header>
+        <form id="registrationForm"> 
+            <div class="container">
+                <h1>Вход</h1>
+                <h2>Войдите в аккаунт</h2>
+                <hr>
+    
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Введите Email" name="email" id="email" required>  
+    
+                <label for="psw"><b>Пороль</b></label>
+                <input type="password" placeholder="Введите пороль" name="psw" id="psw" required> 
+    
+                <hr>
+                <button type="button" onclick="redirectToIndex()" class="registerbtn">Войти</button>
+            </div>
+          
+            
+          </form>
+        <div class ="block">
+
+        </div>
+        <main> 
+            <section></section> 
+            <section></section> 
+            <section></section> 
+        </main> 
+        <footer class="footer2">
+            <div class="left-text">2024@   Gaivoronskaia Kristina</div>
+            <div class="right-text">Все материалы, ссылки, IP, товарные знаки использованы исключительно в образовательных целях, без какой либо выгоды включая экономической. Материалы, ссылки, IP, товарные знаки не предпологаются использованием третьими лицами для реализации своих проектов включая образовательных!</div>
+          </footer> 
+        <script>
+            function redirectToIndex() {
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('psw').value;
+                if (email.trim() === '' || password.trim() === '') {
+                    alert('Пожалуйста, заполните все поля!');
+                    return;
+                }
+    
+                window.location.href = "index.html";
+            }
+        </script>   
+    </body> 
+    </html>

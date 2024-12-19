@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>swapit/Регистрация</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="icon" href="publik/public/1234.png">
+</head>
+<body>
+    <header>Бартер — это обмен одного товара (работы, услуги) на другой без использования денег.</header>
+    <form id="registrationForm">
+        <div class="container">
+            <h1>Регистрация</h1>
+            <h2>Заполните поля, чтобы зарегистрировать аккаунт</h2>
+            <hr>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Введите Email" name="email" id="email" required>
+
+            <label for="psw"><b>Пароль</b></label>
+            <input type="password" placeholder="Введите пароль" name="psw" id="psw" required>
+
+            <hr>
+            <button type="button" onclick="redirectToIndex()" class="registerbtn">Зарегистрироваться</button>
+        </div>
+
+        <div class="container signin">
+            <p>Уже есть аккаунт? <a href="reg.html">Войти</a>.</p>
+        </div>
+    </form>
+
+    <footer class="footer2">
+        <div class="left-text">2024@ Gaivoronskaia Kristina</div>
+        <div class="right-text">Все материалы, ссылки, IP, товарные знаки использованы исключительно в образовательных целях, без какой-либо выгоды. Материалы, ссылки, IP, товарные знаки не предполагаются к использованию третьими лицами для реализации своих проектов, включая образовательные!</div>
+    </footer>
+
+    <script>
+        function redirectToIndex() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('psw').value;
+            if (email.trim() === '' || password.trim() === '') {
+                alert('Пожалуйста, заполните все поля!');
+                return;
+            }
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

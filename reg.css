@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box; 
+  padding: 0; 
+  margin: 0;
+} 
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 84px;
+  color: #ffffff;
+  background-color: #2d3342;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  z-index: 100;
+  padding: 30px;
+}
+
+.container {
+  padding: 20px;
+  font-weight: bold;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 1%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 50px;
+}
+
+input[type=text], 
+input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #fffbec;
+}
+
+input[type=text]:focus, 
+input[type=password]:focus {
+  background-color: #ececec;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #2d3342;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(216, 216, 216);
+  color: #333;
+  max-height: auto;
+}
+
+.footer2 {
+  background-color: #3c3d41;
+  color: white;
+  padding: 20px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  min-height: 100px; 
+}
+
+.footer2 > div {
+  margin: 0 10px; 
+}
+
+.footer2 .left-text {
+  text-align: center;
+  width: 40%;
+}
+
+.footer2 .right-text {
+  text-align: left;
+  width: 50%; 
+}
+
+.footer2 h4 {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0; 
+}
+
+header h1 {
+  font-size: 2em; 
+  color: #ffffff; 
+  margin-bottom: 10px; 
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ffffff;
+  font-style: italic;
+}
+
+nav {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  margin: 0 auto; 
+  width: 80%;
+}

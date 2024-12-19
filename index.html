@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>swapit/Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="publik\public\1234.png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="button-container">
+                <div class="profile-section">
+                    <a href="pr.html">
+                        <img src="publik\4092564-about-mobile-ui-profile-ui-user-website_114033.png" alt="Личный профиль" id="profile-image-button">
+                    </a>
+                </div>
+                <div class="right-buttons">
+                    <a href="k.html">
+                        <img src="publik\shoppingcart_80945 (1).png" alt="Корзина" id="cart-image-button">
+                    </a>
+                    <a href="index.html">
+                        <span>Главная</span>
+                    </a>
+                    <a href="inf.html">
+                        <span>Информация</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1><span style="font-family: franklin gothic medium">swapit</span></h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Поиск товаров..." id="search-input">
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <aside id="filters">
+                <h2>Фильтры</h2>
+                <div class="filter-group">
+                    <label for="category">Категория:</label>
+                    <select id="category">
+                        <option value="">Все</option>
+                        <option value="electronics">electronics</option>
+                        <option value="clothing">clothing</option>
+                        <option value="books">books</option>
+                        <option value="furniture">furniture</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="rarity">Редкость:</label>
+                    <select id="rarity">
+                        <option value="">Все</option>
+                        <option value="common">common</option>
+                        <option value="rare">rare</option>
+                        <option value="unique">unique</option>
+                    </select>
+                </div>
+                <button id="apply-filters">Применить фильтры</button>
+            </aside>
+            <section id="products">
+                <h2>Рекомендации для вас</h2>
+                <div class="product-grid" id="product-grid">
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+<footer class="footer2">
+        <div class="left-text">2024@   Gaivoronskaia Kristina</div>
+        <div class="right-text">Все материалы, ссылки, IP, товарные знаки использованы исключительно в образовательных целях, без какой либо выгоды включая экономической. Материалы, ссылки, IP, товарные знаки не предпологаются использованием третьими лицами для реализации своих проектов включая образовательных!</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
